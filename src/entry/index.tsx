@@ -9,5 +9,5 @@ render(
     <ThemeProvider theme={mainTheme}>
         <App />
     </ThemeProvider>,
-    document.getElementById('ESG')
+    document.getElementById('Figma')
 )
