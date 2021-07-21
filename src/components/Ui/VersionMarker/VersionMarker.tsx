@@ -10,7 +10,7 @@ export const VersionMarker: FC<VMProps> = ({ title = 'Beta' }) => {
 
     return (
         <a
-            href="https://github.com/fEkcL/ESG-by-Figma"
+            href="https://github.com/fEkcL/free-figma-lessons"
             style={{ textDecoration: 'none', width: '100%' }}
         >
             <S.VersionMarker
