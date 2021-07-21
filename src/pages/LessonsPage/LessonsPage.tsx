@@ -15,12 +15,12 @@ export const LessonsPage: FC = () => {
         <Container>
             <S.FirstSection>
                 <S.FirstTitle>
-                    <S.FirstH1>Твой путеводитель по миру Figma</S.FirstH1>
+                    <S.FirstH1>Твой путеводитель по&#160;миру&#160;Figma</S.FirstH1>
                     <VersionMarker />
                 </S.FirstTitle>
                 <S.FirstBody>
-                    Проходи урок за уроком, чтобы узнать все тонкости Figma
-                    <br /> и научиться чистому дизайну в своих проектах.
+                    Проходи урок за&#160;уроком, чтобы&#160;узнать&#160;все&#160;тонкости Figma
+                    и&#160;научиться чистому дизайну в&#160;своих&#160;проектах.
                 </S.FirstBody>
             </S.FirstSection>
 

@@ -1,26 +1,35 @@
 import styled from '@emotion/styled'
+import { mediaSizes } from '@/helpers'
 
 export const FirstSection = styled.section`
     max-width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
-    margin: 88px 0px;
+    padding: 0;
+    margin: 88px 0;
+    ${mediaSizes.S} {
+        margin: 0 0 92px 0;
+    }
 `
 export const FirstTitle = styled.div`
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
+    padding: 0;
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 0px 0px 16px 0px;
+    margin: 0 0 16px 0;
+    ${mediaSizes.S} {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 0 28px 0;
+    }
 `
 export const FirstH1 = styled.h1`
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-weight: bold;
     font-size: 36px;
     line-height: 44px;
@@ -31,11 +40,16 @@ export const FirstH1 = styled.h1`
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 0px 8px 0px 0px;
+    margin: 0 8px 0 0;
+    ${mediaSizes.S} {
+        font-size: 32px;
+        line-height: 40px;
+        margin: 0 0 16px 0;
+    }
 `
 export const FirstBody = styled.p`
-    max-width: 800px;
-    font-family: Roboto;
+    max-width: 600px;
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -58,7 +72,7 @@ export const TabberBox = styled.div`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
+    padding: 0;
     border: 2px none ${props => props.theme.colors.light.add};
     border-bottom-style: solid;
     box-sizing: border-box;
@@ -73,7 +87,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 0px 120px 0px;
+    margin: 0 0 120px 0;
     position: relative;
     min-width: 100%;
 `

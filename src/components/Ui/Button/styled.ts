@@ -1,15 +1,16 @@
 import styled from '@emotion/styled'
 import { TRANSITION } from '@/helpers/defaultStyles'
+import { mediaSizes } from '@/helpers'
 
 export const LeadingIcon = styled.span`
     display: flex;
     align-items: center;
-    margin: 0px 4px 0px 0px;
+    margin: 0 4px 0 0;
 `
 export const TrailingIcon = styled.span`
     display: flex;
     align-items: center;
-    margin: 0px 0px 0px 12px;
+    margin: 0 0 0 12px;
 `
 
 interface ButtonProps {
@@ -89,6 +90,10 @@ export const Stroke = styled.button`
         color: ${props => props.theme.colors.light.white};
         background-color: ${props => props.theme.colors.interactive.pressed};
     }
+
+    ${mediaSizes.S} {
+        width: 100%;
+    }
 `
 export const Text = styled.button<ButtonProps>`
     display: flex;
@@ -127,7 +132,7 @@ export const TextInText = styled.button`
     align-items: center;
     flex-direction: row;
     border: none;
-    padding: 0px 16px 0px 16px;
+    padding: 0 16px 0 16px;
 
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
