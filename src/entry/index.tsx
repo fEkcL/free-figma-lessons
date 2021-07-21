@@ -9,5 +9,5 @@ render(
     <ThemeProvider theme={mainTheme}>
         <App />
     </ThemeProvider>,
-    document.getElementById('Figma')
+    document.getElementById('F')
 )
