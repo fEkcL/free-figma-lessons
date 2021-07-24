@@ -7,55 +7,52 @@ import * as S from './Styled'
 export const Lesson1Data1: FC = () => {
     return (
         <>
-            <Element name="first">
-                <S.Block id={'block'}>
-                    <S.BlockText>
-                        <S.BlockTextTitle>Создание аккаунта</S.BlockTextTitle>
-                        <S.BlockTextText>
-                            <>
-                                Для начала
-                                <a
-                                    style={{ textDecoration: 'none' }}
-                                    href={'https://www.figma.com/signup'}
-                                >
-                                    <Button type={'TextInText'} title={'Создай'} />
-                                </a>
-                                аккаунт в Figma, если у тебя его нет.
-                            </>
-                        </S.BlockTextText>
-                    </S.BlockText>
-                </S.Block>
-            </Element>
-            <Element name="second">
-                <S.Block>
-                    <S.BlockText>
-                        <S.BlockTextTitle>Приложение на компьютер</S.BlockTextTitle>
-                        <S.BlockTextText>
-                            Рекомендую установить приложение на компьютер, потому что в зависимости
-                            от выбранного браузера ты можешь столкнуться с некоторыми неудобствами.
-                            После открой приложение и авторизуйся в нем.
-                        </S.BlockTextText>
-                    </S.BlockText>
-                    <S.Buttons>
-                        <S.ButtonSpan>
+            <S.Block id={'block'}>
+                <S.BlockText>
+                    <S.BlockTextTitle>Создание аккаунта</S.BlockTextTitle>
+                    <S.BlockTextText>
+                        <>
+                            Для начала
                             <a
                                 style={{ textDecoration: 'none' }}
-                                href={'https://www.figma.com/download/desktop/win'}
+                                href={'https://www.figma.com/signup'}
                             >
-                                <Button title={'Для Windows'} />
+                                <Button type={'TextInText'} title={'Создай'} />
                             </a>
-                        </S.ButtonSpan>
-                        <S.ButtonSpan>
-                            <a
-                                style={{ textDecoration: 'none' }}
-                                href={'https://www.figma.com/download/desktop/mac'}
-                            >
-                                <Button title={'Для Mac'} />
-                            </a>
-                        </S.ButtonSpan>
-                    </S.Buttons>
-                </S.Block>
-            </Element>
+                            аккаунт в Figma, если у тебя его нет.
+                        </>
+                    </S.BlockTextText>
+                </S.BlockText>
+            </S.Block>
+
+            <S.Block>
+                <S.BlockText>
+                    <S.BlockTextTitle>Приложение на компьютер</S.BlockTextTitle>
+                    <S.BlockTextText>
+                        Рекомендую установить приложение на компьютер, потому что в зависимости от
+                        выбранного браузера ты можешь столкнуться с некоторыми неудобствами. После
+                        открой приложение и авторизуйся в нем.
+                    </S.BlockTextText>
+                </S.BlockText>
+                <S.Buttons>
+                    <S.ButtonSpan>
+                        <a
+                            style={{ textDecoration: 'none' }}
+                            href={'https://www.figma.com/download/desktop/win'}
+                        >
+                            <Button title={'Для Windows'} />
+                        </a>
+                    </S.ButtonSpan>
+                    <S.ButtonSpan>
+                        <a
+                            style={{ textDecoration: 'none' }}
+                            href={'https://www.figma.com/download/desktop/mac'}
+                        >
+                            <Button title={'Для Mac'} />
+                        </a>
+                    </S.ButtonSpan>
+                </S.Buttons>
+            </S.Block>
         </>
     )
 }
