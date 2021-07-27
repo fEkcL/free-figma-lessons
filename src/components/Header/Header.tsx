@@ -17,6 +17,61 @@ export const Header: FC = () => {
     const [y, setY] = useState(window.scrollY)
 
     const [burgerMenuShow, setBurgerMenuShow] = useState(false)
+    const Burger = {
+        default: (
+            <svg
+                width="28"
+                height="20"
+                viewBox="0 0 28 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M0 17.9999C0 17.1162 0.737413 16.3999 1.64706 16.3999L20.1765 16.3999C21.0861 16.3999 21.8235 17.1162 21.8235 17.9999C21.8235 18.8836 21.0861 19.5999 20.1765 19.5999L1.64706 19.5999C0.737413 19.5999 1.05979e-10 18.8836 0 17.9999Z"
+                    fill="#202020"
+                />
+                <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M0 9.9999C0 9.11625 0.737413 8.3999 1.64706 8.3999H26.3529C27.2626 8.3999 28 9.11625 28 9.9999C28 10.8836 27.2626 11.5999 26.3529 11.5999H1.64706C0.737413 11.5999 0 10.8836 0 9.9999Z"
+                    fill="#202020"
+                />
+                <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M0 1.9999C0 1.11625 0.737413 0.399902 1.64706 0.399902H26.3529C27.2626 0.399902 28 1.11625 28 1.9999C28 2.88356 27.2626 3.5999 26.3529 3.5999H1.64706C0.737413 3.5999 0 2.88356 0 1.9999Z"
+                    fill="#202020"
+                />
+            </svg>
+        ),
+        open: (
+            <svg
+                width="28"
+                height="20"
+                viewBox="0 0 28 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g clipPath="url(#clip0)">
+                    <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M0 9.9999C0 9.11625 0.737413 8.3999 1.64706 8.3999H26.3529C27.2626 8.3999 28 9.11625 28 9.9999C28 10.8836 27.2626 11.5999 26.3529 11.5999H1.64706C0.737413 11.5999 0 10.8836 0 9.9999Z"
+                        fill="#202020"
+                    />
+                </g>
+                <defs>
+                    <clipPath id="clip0">
+                        <rect width="28" height="20" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+        ),
+    }
+
+    const iconBurger = burgerMenuShow ? Burger.open : Burger.default
 
     const handleNavigation = useCallback(
         e => {
@@ -91,44 +146,7 @@ export const Header: FC = () => {
                                 Купить автору кофе
                             </S.BayACoffee>
                             <S.Burger onClick={() => setBurgerMenuShow(prevState => !prevState)}>
-                                <svg
-                                    width="28"
-                                    height="21"
-                                    viewBox="0 0 28 21"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <g clipPath="url(#clip0)">
-                                        <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M0 18.4999C0 17.6162 0.737413 16.8999 1.64706 16.8999L20.1765 16.8999C21.0861 16.8999 21.8235 17.6162 21.8235 18.4999C21.8235 19.3836 21.0861 20.0999 20.1765 20.0999L1.64706 20.0999C0.737413 20.0999 1.05979e-10 19.3836 0 18.4999Z"
-                                            fill="#202020"
-                                        />
-                                        <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M0 10.4999C0 9.61625 0.737413 8.8999 1.64706 8.8999H26.3529C27.2626 8.8999 28 9.61625 28 10.4999C28 11.3836 27.2626 12.0999 26.3529 12.0999H1.64706C0.737413 12.0999 0 11.3836 0 10.4999Z"
-                                            fill="#202020"
-                                        />
-                                        <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M0 2.4999C0 1.61625 0.737413 0.899902 1.64706 0.899902H26.3529C27.2626 0.899902 28 1.61625 28 2.4999C28 3.38356 27.2626 4.0999 26.3529 4.0999H1.64706C0.737413 4.0999 0 3.38356 0 2.4999Z"
-                                            fill="#202020"
-                                        />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0">
-                                            <rect
-                                                width="28"
-                                                height="20"
-                                                fill="white"
-                                                transform="translate(0 0.5)"
-                                            />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                                {iconBurger}
                             </S.Burger>
                         </S.Links>
                     </S.Header>
