@@ -10,6 +10,7 @@ import Logo from '../../images/logo.png'
 
 import BayACoffee from '@/images/bayACoffee.png'
 import _ from 'lodash'
+import { BurgerMenuCon } from './Styled'
 
 export const Header: FC = () => {
     const [scrollY, setScrollY] = useState(0)
@@ -168,18 +169,20 @@ export const Header: FC = () => {
                 </Container>
             </S.Wrapper>
             <S.BurgerMenu isShow={burgerMenuShow}>
-                <Link
-                    to="/Lessons"
-                    style={{ textDecoration: 'none' }}
-                    onClick={() => {
-                        animateScroll.scrollToTop(), setBurgerMenuShow(false)
-                    }}
-                >
-                    <Button type="Text" title="Уроки и задания" />
-                </Link>
-                <a href="https://www.figma.com/home" style={{ textDecoration: 'none' }}>
-                    <Button type="Text" title="О Figma" />
-                </a>
+                <S.BurgerMenuCon isShow={burgerMenuShow}>
+                    <Link
+                        to="/Lessons"
+                        style={{ textDecoration: 'none' }}
+                        onClick={() => {
+                            animateScroll.scrollToTop(), setBurgerMenuShow(false)
+                        }}
+                    >
+                        <Button type="Text" title="Уроки и задания" />
+                    </Link>
+                    <a href="https://www.figma.com/home" style={{ textDecoration: 'none' }}>
+                        <Button type="Text" title="О Figma" />
+                    </a>
+                </S.BurgerMenuCon>
             </S.BurgerMenu>
         </>
     )
