@@ -5,6 +5,9 @@ import { mediaSizes } from '@/helpers'
 interface WrapperProps {
     isShow: boolean
 }
+interface BurgerMenuProps {
+    isShow: boolean
+}
 
 export const Wrapper = styled.div<WrapperProps>`
     transition: ${TRANSITION};
@@ -18,6 +21,10 @@ export const Wrapper = styled.div<WrapperProps>`
     border: 1.4px none ${props => props.theme.colors.light.add};
     border-bottom-style: solid;
     box-sizing: border-box;
+
+    ${mediaSizes.S} {
+        margin-bottom: 32px;
+    }
 `
 
 export const Header = styled.div`
@@ -41,6 +48,9 @@ export const Links = styled.div`
     order: 2;
     flex-grow: 1;
     margin: 0 0 0 16px;
+    ${mediaSizes.S} {
+        justify-content: flex-end;
+    }
 `
 
 export const Logo = styled.div`
@@ -63,8 +73,10 @@ export const Buttons = styled.div`
     flex-direction: row;
     align-items: center;
     padding: 0;
+    ${mediaSizes.S} {
+        display: none;
+    }
 `
-
 export const BayACoffee = styled.a`
     text-decoration: none;
     padding: 0;
@@ -96,4 +108,30 @@ export const BayACoffee = styled.a`
     &:active {
         color: ${props => props.theme.colors.interactive.pressed};
     }
+    ${mediaSizes.S} {
+        display: none;
+    }
+`
+export const Burger = styled.div`
+    display: none;
+
+    ${mediaSizes.S} {
+        display: block;
+    }
+`
+
+export const BurgerMenu = styled.div<BurgerMenuProps>`
+    transition: all 0.2s ease-out 0s;
+    opacity: ${props => (props.isShow ? '100' : '0')};
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ${props => props.theme.colors.light.bg};
+    z-index: 2;
+    padding: 120px 0 0 0;
+    flex-direction: column;
+    align-items: center;
 `
