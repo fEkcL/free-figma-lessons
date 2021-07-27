@@ -113,7 +113,11 @@ export const Header: FC = () => {
             <S.Wrapper isShow={scrollY <= 400 || offset === 1}>
                 <Container>
                     <S.Header>
-                        <S.Logo onClick={() => animateScroll.scrollToTop()}>
+                        <S.Logo
+                            onClick={() => {
+                                animateScroll.scrollToTop(), setBurgerMenuShow(false)
+                            }}
+                        >
                             <Link to="/">
                                 <svg
                                     width="80"
