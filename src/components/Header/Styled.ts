@@ -67,6 +67,10 @@ export const Logo = styled.div`
     margin: 0 0;
     border: 1px none ${props => props.theme.colors.light.add};
     border-right-style: solid;
+
+    ${mediaSizes.S} {
+        border: none;
+    }
 `
 export const Buttons = styled.div`
     display: flex;
