@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef } from 'react'
+import React, { FC, useEffect, useRef, useState } from 'react'
 import VanillaTilt from 'vanilla-tilt'
 
 import { CoverContainer } from '@/components/Layout/CoverContainer'

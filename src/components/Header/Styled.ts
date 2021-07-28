@@ -126,7 +126,7 @@ export const Burger = styled.div`
 
 export const BurgerMenu = styled.div<BurgerMenuProps>`
     transition: all 0.2s ease-out 0s;
-    opacity: ${props => (props.isShow ? '100' : '0')};
+    display: ${props => (props.isShow ? 'flex' : 'none')};
     position: fixed;
     top: 0;
     left: 0;
@@ -135,9 +135,6 @@ export const BurgerMenu = styled.div<BurgerMenuProps>`
     background-color: ${props => props.theme.colors.light.bg};
     z-index: 2;
     padding: 120px 0 0 0;
-`
-export const BurgerMenuCon = styled.div<BurgerMenuProps>`
-    display: ${props => (props.isShow ? 'flex' : 'none')};
     flex-direction: column;
     align-items: center;
 `
