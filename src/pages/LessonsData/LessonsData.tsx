@@ -1,10 +1,8 @@
 import React, { FC, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Button } from '@/components/Ui/Button'
 import { Element } from 'react-scroll'
 
 import * as S from './Styled'
-import { BlockContent } from './Styled'
 
 export const Lesson1Data1: FC = () => {
     const [w, setW] = useState(0)
@@ -122,15 +120,15 @@ export const Lesson1Data2: FC = () => {
                 <S.BlockText>
                     <S.BlockTextTitle>Содержание</S.BlockTextTitle>
                     <S.BlockContent>
-                        <S.Content>Вкладки недавние и черновики;</S.Content>
-                        <S.Content>Создание файла;</S.Content>
-                        <S.Content>Шаблоны;</S.Content>
-                        <S.Content>Настройки аккаунта;</S.Content>
-                        <S.Content>Уведомления;</S.Content>
-                        <S.Content>Умный поиск;</S.Content>
-                        <S.Content>Удаленные файлы;</S.Content>
-                        <S.Content>Комьюнити;</S.Content>
-                        <S.Content>Тарифы в Figma;</S.Content>
+                        <S.Content>Вкладки «Недавние» и «Черновики».</S.Content>
+                        <S.Content>Создание файла.</S.Content>
+                        <S.Content>Шаблоны.</S.Content>
+                        <S.Content>Настройки аккаунта.</S.Content>
+                        <S.Content>Уведомления.</S.Content>
+                        <S.Content>Умный поиск.</S.Content>
+                        <S.Content>Удаленные файлы.</S.Content>
+                        <S.Content>Комьюнити.</S.Content>
+                        <S.Content>Тарифы в Figma.</S.Content>
                         <S.Content>Команды.</S.Content>
                     </S.BlockContent>
                 </S.BlockText>
@@ -175,11 +173,11 @@ export const Lesson1Data3: FC = () => {
                 <S.BlockText>
                     <S.BlockTextTitle>Содержание</S.BlockTextTitle>
                     <S.BlockContent>
-                        <S.Content>Что такое комьюнити и как в него попасть;</S.Content>
-                        <S.Content>Обзор того, что может быть опубликовано в комьюнити;</S.Content>
-                        <S.Content>Копирование файла к себе;</S.Content>
-                        <S.Content>Что находится на стартовой странице;</S.Content>
-                        <S.Content>Профиль автора и как создать свой профиль.</S.Content>
+                        <S.Content>Что такое комьюнити и как в него попасть.</S.Content>
+                        <S.Content>Что можно публиковать в комьюнити.</S.Content>
+                        <S.Content>Копирование файла из комьюнити.</S.Content>
+                        <S.Content>Что находится на стартовой странице.</S.Content>
+                        <S.Content>Профиль автора, и как его создать.</S.Content>
                     </S.BlockContent>
                 </S.BlockText>
             </S.Block>
@@ -223,16 +221,17 @@ export const Lesson1Data4: FC = () => {
                 <S.BlockText>
                     <S.BlockTextTitle>Содержание</S.BlockTextTitle>
                     <S.BlockContent>
-                        <S.Content>Что такое команды и для чего они;</S.Content>
-                        <S.Content>Условия бесплатного тарифа;</S.Content>
+                        <S.Content>Что такое команды и зачем они нужны.</S.Content>
+                        <S.Content>Условия бесплатного тарифа.</S.Content>
                         <S.Content>
-                            Участники, приглашения в команду и манипуляция с правами участников;
+                            Участники, приглашения в команду и манипуляция с правами участников.
                         </S.Content>
-                        <S.Content>Настройки команды;</S.Content>
+                        <S.Content>Настройки команды.</S.Content>
                         <S.Content>
-                            Публикация профиля команды в комьюнити и поиск других команд;
+                            Публикация профиля команды в комьюнити и поиск других команд.
                         </S.Content>
-                        <S.Content>Удаление и смена названия;</S.Content>
+                        <S.Content>Смена названия команды.</S.Content>
+                        <S.Content>Удаление команды.</S.Content>
                         <S.Content>Создание новой команды.</S.Content>
                     </S.BlockContent>
                 </S.BlockText>
