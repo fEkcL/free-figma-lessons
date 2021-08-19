@@ -16,6 +16,10 @@ import ArticleCardCover1 from '@/images/ArticleCardCover1.png'
 import ArticleCardCover2 from '@/images/ArticleCardCover2.png'
 import ArticleCardCover3 from '@/images/ArticleCardCover3.png'
 import ArticleCardCover4 from '@/images/ArticleCardCover4.png'
+import ArticleCardCover5 from '@/images/ArticleCardCover5.png'
+import ArticleCardCover6 from '@/images/ArticleCardCover6.png'
+import ArticleCardCover7 from '@/images/ArticleCardCover7.png'
+import ArticleCardCover8 from '@/images/ArticleCardCover8.png'
 
 export const IndexPage: FC = () => {
     return (
@@ -143,6 +147,49 @@ export const IndexPage: FC = () => {
                                 src={ArticleCardCover4}
                                 title={
                                     'Что на самом деле означает простой дизайн? Правильный подход к созданию UI-kit для iOS'
+                                }
+                            />
+                        </S.FourthArticle>
+
+                        <S.FourthArticle>
+                            <ArticleCard
+                                linkMarkerLink={'https://ux.pub/interactive-components-figma/'}
+                                categoryMarkerLink={'https://ux.pub/design-tools/figma/'}
+                                categoryMarkerTitle={'figma'}
+                                src={ArticleCardCover5}
+                                title={
+                                    'Подробный разбор интерактивных компонентов (Interactive Components) Figma'
+                                }
+                            />
+                            <ArticleCard
+                                linkMarkerLink={
+                                    'https://ux.pub/pismo-k-molodomu-dizayneru-ot-tobias-van-shnaydera/'
+                                }
+                                categoryMarkerLink={'https://ux.pub/karera/'}
+                                categoryMarkerTitle={'Карьера'}
+                                src={ArticleCardCover6}
+                                title={'Письмо к молодому дизайнеру от Тобиас ван Шнайдера'}
+                            />
+                            <ArticleCard
+                                linkMarkerLink={
+                                    'https://ux.pub/rukovodstvo-po-tsvetu-v-ux-ui-dizayne-kak-vybirat-smeshivat-i-sochetat-tsveta/'
+                                }
+                                categoryMarkerLink={'https://ux.pub/user-experience/'}
+                                categoryMarkerTitle={'ux дизайн'}
+                                src={ArticleCardCover7}
+                                title={
+                                    'Руководство по цвету в UX/UI дизайне. Как выбирать, смешивать и сочетать цвета'
+                                }
+                            />
+                            <ArticleCard
+                                linkMarkerLink={
+                                    'https://ux.pub/15-sovetov-dlya-uluchsheniya-ux-form-registratsii-i-vhoda-v-sistemu/'
+                                }
+                                categoryMarkerLink={'https://ux.pub/user-experience/'}
+                                categoryMarkerTitle={'ux дизайн'}
+                                src={ArticleCardCover8}
+                                title={
+                                    '15 советов для улучшения UX форм регистрации и входа в систему'
                                 }
                             />
                         </S.FourthArticle>

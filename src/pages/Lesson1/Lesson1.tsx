@@ -36,29 +36,22 @@ export const Lesson1: FC = () => {
                         <LessonButton
                             active={lessonData === 'second'}
                             number={'2'}
-                            title={'Отличия приложения'}
+                            title={'Общее знакомство'}
                             onClick={() => setLessonData('second')}
                             tags={[]}
                         />
                         <LessonButton
                             active={lessonData === 'third'}
                             number={'3'}
-                            title={'Команды'}
+                            title={'Комьюнити'}
                             onClick={() => setLessonData('third')}
                             tags={[]}
                         />
                         <LessonButton
                             active={lessonData === 'fourth'}
                             number={'4'}
-                            title={'Файлы и проекты'}
+                            title={'Команды'}
                             onClick={() => setLessonData('fourth')}
-                            tags={[]}
-                        />
-                        <LessonButton
-                            active={lessonData === 'fifth'}
-                            number={'5'}
-                            title={'Последние просмотренные'}
-                            onClick={() => setLessonData('fifth')}
                             tags={[]}
                         />
                     </S.Menu>
@@ -67,7 +60,6 @@ export const Lesson1: FC = () => {
                         {lessonData === 'second' && <D.Lesson1Data2 />}
                         {lessonData === 'third' && <D.Lesson1Data3 />}
                         {lessonData === 'fourth' && <D.Lesson1Data4 />}
-                        {lessonData === 'fifth' && <D.Lesson1Data5 />}
                     </S.Info>
                 </S.Content>
             </Container>

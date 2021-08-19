@@ -250,7 +250,13 @@ export const FourthArticle = styled.div`
 
     min-width: 100%;
 
+    margin-bottom: 48px;
+    :last-of-type {
+        margin: 0;
+    }
+
     ${mediaSizes.S} {
         flex-direction: column;
+        margin: 0;
     }
 `

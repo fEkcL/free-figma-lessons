@@ -23,7 +23,7 @@ export const BlockTextTitle = styled.h3`
     margin: 0 0 12px 0;
     padding: 0;
 
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -36,7 +36,28 @@ export const BlockTextText = styled.p`
     margin: 0;
     padding: 0;
 
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    color: ${props => props.theme.colors.light.black};
+`
+export const BlockContent = styled.ul`
+    margin: 0;
+    padding: 0 0 0 24px;
+`
+export const Content = styled.li`
+    margin: 0;
+    padding: 0 0 8px 0;
+    :last-of-type {
+        padding: 0;
+    }
+
+    font-family: Raleway, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;

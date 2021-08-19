@@ -34,20 +34,6 @@ export const LessonsPage: FC = () => {
                     imgSrc={LessonPackCardBG1}
                     bgColor={'#efbda9'}
                 />
-                <LessonPackCard
-                    link={'/'}
-                    title={'111'}
-                    body={'111'}
-                    imgSrc={LessonPackCardBG2}
-                    bgColor={'#C6B9FF'}
-                />
-                <LessonPackCard
-                    link={'/'}
-                    title={'111'}
-                    body={'111'}
-                    imgSrc={LessonPackCardBG3}
-                    bgColor={'#efb8e8'}
-                />
             </S.Content>
         </Container>
     )
