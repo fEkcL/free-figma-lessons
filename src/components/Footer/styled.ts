@@ -73,7 +73,7 @@ export const FeedbackBody = styled.p`
         line-height: 28px;
     }
 `
-export const FeedbackForm = styled.form`
+export const FeedbackForm = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;

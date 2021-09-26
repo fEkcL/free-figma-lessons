@@ -7,13 +7,13 @@ module.exports = {
     entry: './src/entry/index.tsx',
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js',
+        filename: 'bundle.[contenthash].js',
         publicPath: '/'
     },
     module: {
         rules: [
             {
-                test: /\.txt$/, 
+                test: /\.txt$/,
                 use: 'raw-loader'
             },
             {
@@ -47,7 +47,7 @@ module.exports = {
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new webpack.DefinePlugin({
             ___BUILDDATE___: "'" + (new Date()).toLocaleDateString('ru-RU') + "'"
-         })         
+         })
     ],
     devServer: {
 		port: 4200,

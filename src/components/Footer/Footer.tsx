@@ -1,11 +1,10 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react'
-import React, { ChangeEventHandler, FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import Select from 'react-select'
 import { useFormik } from 'formik'
 
 import * as S from './styled'
 import { Button } from '@/components/Ui/Button'
+import axios from 'axios'
 
 const options = [
     { value: 'section', label: 'Раздел' },
@@ -56,16 +55,25 @@ const selectStyles = {
 
 interface DropdownProps {
     value: string
-    onChange: (e) => void
+    setValue: (value: string) => void
 }
-const Dropdown: FC<DropdownProps> = ({ value, onChange }) => {
+const Dropdown: FC<DropdownProps> = ({ value, setValue }) => {
     const [selectedOption, setSelectedOption] = useState(options[0])
+
+    useEffect(() => {
+        setValue(options[0].label)
+    }, [])
+
+    const handleChange = value => {
+        setValue(value.label)
+        setSelectedOption(value)
+    }
 
     return (
         <Select
             styles={selectStyles}
             value={selectedOption}
-            onChange={setSelectedOption}
+            onChange={e => handleChange(e)}
             options={options}
         />
     )
@@ -78,7 +86,11 @@ export const Footer: FC = () => {
             description: '',
         },
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2))
+            // eslint-disable-next-line promise/catch-or-return
+            axios.post('/mail.php', values).finally(() => {
+                window.scrollTo(0, 0)
+                window.location.reload()
+            })
         },
     })
 
@@ -87,7 +99,7 @@ export const Footer: FC = () => {
             <S.Feedback>
                 <S.FeedbackWrapper>
                     <S.FeedbackContent>
-                        <S.FeedbackTitle>Равнодушее — явно что-то не&nbsp;хорошее</S.FeedbackTitle>
+                        <S.FeedbackTitle>Равнодушие — явно что-то не&nbsp;хорошее</S.FeedbackTitle>
                         <S.FeedbackBody>
                             Я хочу сделать этот продукт актуальным и доступным для каждого. Если ты
                             нашёл интересную статью, у тебя появилась идея для урока, заметил
@@ -108,7 +120,10 @@ export const Footer: FC = () => {
                     <S.FeedbackForm>
                         <S.FeedbackFormTitle>Помоги стать лучше!</S.FeedbackFormTitle>
                         <S.Form onSubmit={formik.handleSubmit}>
-                            <Dropdown onChange={formik.handleChange} value={formik.values.select} />
+                            <Dropdown
+                                setValue={value => formik.setFieldValue('select', value)}
+                                value={formik.values.select}
+                            />
                             <S.Textarea
                                 id="description"
                                 name="description"
